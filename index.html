@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Data</title>
+    <script type="text/javascript" defer>
+        let url = "https://jsonplaceholder.typicode.com/todos/1"
+        let values;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => document.querySelector('#output').innerHTML = JSON.stringify(data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    </script>
+</head>
+<body>
+<div id="output"/>
+</body>
+</html>
