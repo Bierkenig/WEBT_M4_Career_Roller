@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>Fetch Data</title>
     <script type="text/javascript" defer>
-        let url = "https://jsonplaceholder.typicode.com/todos/1"
-        let values;
+        let url = "OpenJsonData.json"
         fetch(url)
             .then(response => response.json())
             .then(data => document.querySelector('#output').innerHTML = JSON.stringify(data))
@@ -15,6 +14,7 @@
     </script>
 </head>
 <body>
-<div id="output"/>
+<div id="output">
+</div>
 </body>
 </html>
