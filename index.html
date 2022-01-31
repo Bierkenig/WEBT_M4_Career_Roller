@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -15,7 +16,7 @@
             .then(data => {
                 document.getElementById('getRandomJob').onclick = function (){
                     let randomJob = data[Math.floor(Math.random() * data.length - 1)];
-                    document.querySelector('#output').innerHTML = '<div class="text-center mt-5"><u>Job Titel:</u></div><h3 class="text-center mt-2">' + randomJob['Titel'] + '</h3>';
+                    document.querySelector('#output').innerHTML = '<div class="text-center mt-5"><u>Titel:</u></div><h3 class="text-center mt-2">' + randomJob['Titel'] + '</h3>';
                     document.querySelector('#output').innerHTML += '<br><div class="text-center"><u>Ort:</u></div><h4 class="text-center">' + randomJob['Province'] + '</h4>';
                     document.querySelector('#output').innerHTML += '<br><div class="text-center"><u>Beschreibung:</u></div><p>' + randomJob['Description'] + '</p>';
                 }
@@ -25,12 +26,12 @@
             });
     </script>
     <style>
-        * {font-family: "Arial"}
+        * {font-family: "Arial",serif}
         #note {font-style: italic}
     </style>
 </head>
 <body>
-<div class="mt-2 text-center" id="buttonDiv">
+<div class="mt-4 text-center" id="buttonDiv">
     <button id="getRandomJob" class="btn btn-primary btn-lg">zufälliger Job</button>
 </div>
 <div class="d-flex justify-content-center">
